@@ -1,5 +1,5 @@
 import React, { useState, ChangeEventHandler, MouseEventHandler } from 'react'
-import '../styles/RenderForm.css'
+import '../styles/RenderForm.scss'
 
 const RenderForm = () => {
     const [name, setName] = useState('')
