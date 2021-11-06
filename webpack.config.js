@@ -6,20 +6,26 @@ module.exports = {
     mode: process.env.NODE_ENV,
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.join(__dirname, 'build'),
+        filename: 'index.bundle.js',
     },
+    mode: process.env.NODE_ENV || 'development',
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+    devServer: { contentBase: path.join(__dirname, 'src') },
     module: {
         rules: [
             {
-                test: /\.?js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
-                    },
-                },
+                use: ['babel-loader'],
             },
+            {
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: ['ts-loader'],
+            }
         ],
     },
     plugins: [
