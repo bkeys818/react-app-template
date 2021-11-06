@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, ChangeEventHandler, MouseEventHandler } from 'react'
 import '../styles/RenderForm.css'
 
 const RenderForm = () => {
@@ -6,17 +6,17 @@ const RenderForm = () => {
     const [email, setEmail] = useState('')
     const [hasValue, setHasValue] = useState(false)
 
-    const handleNameChange = event => {
+    const handleNameChange: ChangeEventHandler<HTMLInputElement> = event => {
         setHasValue(false)
         setName(event.target.value)
     }
 
-    const handleEmailChange = event => {
+    const handleEmailChange: ChangeEventHandler<HTMLInputElement> = event => {
         setHasValue(false)
         setEmail(event.target.value)
     }
 
-    const handleSubmit = event => {
+    const handleSubmit: MouseEventHandler<HTMLInputElement> = event => {
         event.preventDefault()
         if (name && email) {
             setHasValue(true)
