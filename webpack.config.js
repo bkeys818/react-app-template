@@ -1,7 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/** @type { import('webpack').Configuration } */
 module.exports = {
+    mode: process.env.NODE_ENV,
     entry: path.join(__dirname, 'src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
