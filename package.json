@@ -5,8 +5,8 @@
     "private": true,
     "main": "lib/index.js",
     "scripts": {
-        "dev": "webpack serve --node-env development",
-        "build": "webpack --node-env production"
+        "webpack": "webpack",
+        "start": "webpack serve"
     },
     "repository": {
         "type": "git",
