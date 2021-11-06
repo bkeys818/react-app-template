@@ -1,0 +1,23 @@
+{
+    "name": "notion-canvas-plugin-frontend",
+    "version": "1.0.0",
+    "description": "The front-end of a web app to sync notion with canvas",
+    "private": true,
+    "main": "lib/index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bkeys818/notion-canvas-sync-frontend.git"
+    },
+    "keywords": [
+        "notion",
+        "canvas",
+        "sync"
+    ],
+    "author": "Ben Keys (https://github.com/bkeys818)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bkeys818/notion-canvas-sync-frontend/issues"
+    },
+    "homepage": "https://github.com/bkeys818/notion-canvas-sync-frontend#readme"
+}
