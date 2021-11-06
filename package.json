@@ -6,7 +6,8 @@
     "main": "lib/index.js",
     "scripts": {
         "webpack": "webpack",
-        "start": "webpack serve"
+        "start": "webpack serve",
+        "format": "prettier -w ."
     },
     "repository": {
         "type": "git",
