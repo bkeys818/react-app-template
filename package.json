@@ -4,7 +4,10 @@
     "description": "The front-end of a web app to sync notion with canvas",
     "private": true,
     "main": "lib/index.js",
-    "scripts": {},
+    "scripts": {
+        "dev": "webpack serve --node-env development",
+        "build": "webpack --node-env production"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/bkeys818/notion-canvas-sync-frontend.git"
